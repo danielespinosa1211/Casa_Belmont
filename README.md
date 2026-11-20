@@ -25,7 +25,7 @@ o publicar la carpeta en GitHub Pages.
 ## Publicar en GitHub Pages
 1. Subir el repositorio a GitHub.
 2. Settings → Pages → Branch `main` → carpeta `/ (root)`.
-3. La tienda queda en `https://usuario.github.io/Casa-Belmont/CasaBelmont/`
+3. La tienda queda en `https://github.com/danielespinosa1211/Casa_Belmont.git`
 
 ## Estructura
 ```

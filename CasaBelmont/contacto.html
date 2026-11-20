@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Casa Belmont</title>
+    <meta name="description" content="Casa Belmont - Muebles que inspiran hogares">
+    <link rel="icon" href="assets/img/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body data-pagina="contacto">
+
+<main>
+        <section class="header-productos">
+            <h1>Casa Belmont</h1>
+            <p>Estamos para ayudarte</p>
+        </section>
+
+        <div class="contacto">
+            <section class="contenedor-contacto">
+                <div class="info-contacto">
+                    <h2>Contáctanos</h2>
+                    <p>¿Tienes dudas sobre nuestros muebles? Nuestro equipo está listo para atenderte.</p>
+
+                    <div class="dato-contacto">
+                        <i class="fa-solid fa-phone"></i>
+                        <div><strong>Teléfono</strong>304 402 6556</div>
+                    </div>
+                    <div class="dato-contacto">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div><strong>Correo</strong>contacto@casabelmont.com</div>
+                    </div>
+                    <div class="dato-contacto">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div><strong>Ubicación</strong>Pachaquiaro, Meta - Colombia</div>
+                    </div>
+                </div>
+
+                <div class="form-contacto">
+                    <h2>Envíanos un mensaje</h2>
+                    <div id="mensaje-contacto"></div>
+                    <form id="form-contacto">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="correo" placeholder="Correo" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                        <textarea name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+                        <button type="submit">Enviar mensaje</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- JavaScript: el encabezado y el pie se insertan con layout.js -->
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/tienda.js"></script>
+</body>
+</html>

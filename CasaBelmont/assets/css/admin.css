@@ -1,0 +1,259 @@
+/* =========================================================
+   CASA BELMONT - PANEL DE ADMINISTRACIÓN
+   ========================================================= */
+
+:root {
+    --cafe: #8B5E3C;
+    --cafe-oscuro: #6d472d;
+    --dorado: #C9A15B;
+    --fondo-calido: #f8f6f3;
+    --azul: #3498db;
+    --rojo: #e74c3c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--fondo-calido);
+    color: #333;
+}
+
+a { text-decoration: none; color: inherit; }
+
+ul { list-style: none; }
+
+button, input, select, textarea { font-family: inherit; }
+
+:focus-visible { outline: 3px solid var(--dorado); outline-offset: 2px; }
+
+/* LOGIN */
+.login-admin { min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+
+.form-login {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+.form-login img { width: 110px; margin: 0 auto 10px; display: block; }
+
+.form-login h1 { text-align: center; color: var(--cafe); margin-bottom: 10px; }
+
+.form-login h2 { text-align: center; color: #666; margin-bottom: 30px; font-size: 20px; }
+
+.form-login input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-login button {
+    width: 100%;
+    padding: 15px;
+    background: var(--cafe);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form-login button:hover { background: var(--cafe-oscuro); }
+
+.form-login .ayuda { text-align: center; font-size: 13px; color: #888; margin-top: 20px; }
+
+.form-login .ayuda a { color: var(--cafe); font-weight: 600; }
+
+.mensaje-error { background: #f8d7da; color: #721c24; padding: 12px; border-radius: 8px; margin-bottom: 20px; }
+
+/* ESTRUCTURA */
+.dashboard { display: flex; min-height: 100vh; }
+
+.sidebar { width: 260px; background: var(--cafe); color: white; padding: 30px; flex-shrink: 0; }
+
+.sidebar h2 { text-align: center; margin-bottom: 40px; }
+
+.sidebar li { margin: 8px 0; }
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 17px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.sidebar a:hover { background: rgba(255, 255, 255, .12); }
+
+.sidebar a.activo { background: rgba(0, 0, 0, .2); color: #f5d6a1; }
+
+.sidebar i { width: 20px; text-align: center; }
+
+.contenido { flex: 1; padding: 40px; min-width: 0; }
+
+.contenido > p { color: #666; margin-top: 5px; }
+
+.encabezado-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* TARJETAS */
+.cards-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card-dashboard { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, .08); }
+
+.card-dashboard h2 { font-size: 20px; color: var(--cafe); margin-bottom: 12px; }
+
+.card-dashboard .numero { font-size: 34px; font-weight: 700; }
+
+.card-dashboard p { line-height: 1.7; }
+
+.zona-peligro { margin-top: 50px; padding: 25px 30px; border: 1px dashed #c0392b; border-radius: 12px; background: #fff; }
+
+.zona-peligro h3 { color: #c0392b; margin-bottom: 8px; }
+
+.zona-peligro p { color: #666; margin-bottom: 15px; }
+
+/* TABLAS */
+.tabla-contenedor { overflow-x: auto; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, .08); }
+
+.tabla-admin { width: 100%; border-collapse: collapse; background: white; min-width: 700px; }
+
+.tabla-admin th { background: var(--cafe); color: white; padding: 15px; font-weight: 600; }
+
+.tabla-admin td { padding: 15px; text-align: center; border-bottom: 1px solid #eee; }
+
+.tabla-admin img { width: 80px; height: 60px; object-fit: cover; border-radius: 8px; margin: auto; }
+
+.tabla-admin td:last-child { white-space: nowrap; }
+
+.tabla-admin select, .tabla-admin input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.tabla-vacia { padding: 40px; text-align: center; color: #888; }
+
+/* BOTONES */
+.btn-agregar, .btn-editar, .btn-eliminar, .btn-secundario {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin: 3px;
+    transition: .2s;
+}
+
+.btn-agregar { background: var(--cafe); padding: 12px 20px; font-size: 15px; }
+
+.btn-agregar:hover { background: var(--cafe-oscuro); }
+
+.btn-editar { background: var(--azul); }
+
+.btn-editar:hover { background: #217dbb; }
+
+.btn-eliminar { background: var(--rojo); }
+
+.btn-eliminar:hover { background: #c0392b; }
+
+.btn-secundario { background: #777; }
+
+/* FORMULARIOS */
+.contenedor-formulario {
+    max-width: 700px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+.contenedor-formulario label { display: block; margin-top: 18px; margin-bottom: 8px; font-weight: 600; }
+
+.contenedor-formulario input[type="text"],
+.contenedor-formulario input[type="number"],
+.contenedor-formulario input[type="file"],
+.contenedor-formulario select,
+.contenedor-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.contenedor-formulario .check { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+
+.contenedor-formulario .check input { width: 18px; height: 18px; }
+
+.vista-previa { width: 220px; margin-top: 12px; border-radius: 10px; display: none; }
+
+.acciones-form { display: flex; align-items: center; gap: 15px; margin-top: 30px; }
+
+.acciones-form button {
+    padding: 14px 30px;
+    background: var(--cafe);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.acciones-form button:hover { background: var(--cafe-oscuro); }
+
+.btn-cancelar { color: #555; }
+
+.form-linea { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 25px; }
+
+.form-linea input { flex: 1; min-width: 200px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; }
+
+/* DETALLE PEDIDO */
+.card-dashboard p strong { display: inline-block; min-width: 100px; }
+
+.estado { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; background: #eee; }
+
+.estado-pendiente { background: #fff3cd; color: #856404; }
+
+.estado-confirmado { background: #d1ecf1; color: #0c5460; }
+
+.estado-enviado { background: #e2d9f3; color: #4a2f80; }
+
+.estado-entregado { background: #d4edda; color: #155724; }
+
+.estado-cancelado { background: #f8d7da; color: #721c24; }
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .dashboard { flex-direction: column; }
+    .sidebar { width: 100%; padding: 20px; }
+    .sidebar h2 { margin-bottom: 15px; }
+    .sidebar ul { display: flex; flex-wrap: wrap; gap: 5px; }
+    .sidebar li { margin: 0; }
+    .sidebar a { font-size: 15px; }
+    .contenido { padding: 25px 18px; }
+    .contenedor-formulario { padding: 25px; }
+}

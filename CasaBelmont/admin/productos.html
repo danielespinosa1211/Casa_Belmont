@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Administrar Productos | Casa Belmont</title>
+    <link rel="icon" href="../assets/img/logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body data-base="../" data-admin="productos">
+
+<div class="dashboard">
+    <!-- El menú lateral se inserta con admin.js -->
+    <main class="contenido">
+
+        <div class="encabezado-admin">
+            <h1><i class="fa-solid fa-box"></i> Administrar Productos</h1>
+            <a href="producto_form.html" class="btn-agregar">+ Agregar Producto</a>
+        </div>
+
+        <div class="tabla-contenedor">
+            <table class="tabla-admin">
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Imagen</th><th>Nombre</th><th>Categoría</th>
+                        <th>Precio</th><th>Destacado</th><th>Oferta</th><th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos"></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+    <script src="../assets/js/db.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

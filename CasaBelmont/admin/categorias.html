@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Categorías | Casa Belmont</title>
+    <link rel="icon" href="../assets/img/logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body data-base="../" data-admin="categorias">
+
+<div class="dashboard">
+    <!-- El menú lateral se inserta con admin.js -->
+    <main class="contenido">
+
+        <div class="encabezado-admin">
+            <h1><i class="fa-solid fa-folder-open"></i> Administrar Categorías</h1>
+        </div>
+
+        <form class="form-linea" id="form-categoria">
+            <input type="text" name="nombre" placeholder="Nombre de la nueva categoría" aria-label="Nombre de categoría" required>
+            <button type="submit" class="btn-agregar">+ Agregar categoría</button>
+        </form>
+
+        <div class="tabla-contenedor">
+            <table class="tabla-admin">
+                <thead>
+                    <tr><th>ID</th><th>Nombre</th><th>Productos</th><th>Acciones</th></tr>
+                </thead>
+                <tbody id="tabla-categorias"></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+    <script src="../assets/js/db.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

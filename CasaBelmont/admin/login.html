@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Login Administrador | Casa Belmont</title>
+    <link rel="icon" href="../assets/img/logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body data-base="../" data-admin="login">
+
+<div class="login-admin">
+    <form class="form-login" id="form-login">
+        <img src="../assets/img/logo/logo.png" alt="">
+        <h1>Casa Belmont</h1>
+        <h2>Panel de Administración</h2>
+
+        <div id="mensaje"></div>
+
+        <input type="text" name="usuario" placeholder="Usuario" autocomplete="username" required>
+        <input type="password" name="password" placeholder="Contraseña" autocomplete="current-password" required>
+        <button type="submit">Iniciar sesión</button>
+
+        <p class="ayuda">Usuario de prueba: <strong>admin</strong> / <strong>admin123</strong><br>
+        <a href="../index.html">← Volver a la tienda</a></p>
+    </form>
+</div>
+
+    <script src="../assets/js/db.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

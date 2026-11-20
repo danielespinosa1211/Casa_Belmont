@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Dashboard | Casa Belmont</title>
+    <link rel="icon" href="../assets/img/logo/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+
+<body data-base="../" data-admin="dashboard">
+
+<div class="dashboard">
+    <!-- El menú lateral se inserta con admin.js -->
+    <main class="contenido">
+
+        <h1>Bienvenido, <span id="nombre-admin"></span> 👋</h1>
+        <p>Panel administrativo Casa Belmont</p>
+
+        <div class="cards-dashboard">
+            <div class="card-dashboard">
+                <h2><i class="fa-solid fa-box"></i> Productos</h2>
+                <p class="numero" id="total-productos">0</p>
+                <p>productos registrados</p>
+            </div>
+            <div class="card-dashboard">
+                <h2><i class="fa-solid fa-cart-shopping"></i> Pedidos</h2>
+                <p class="numero" id="total-pedidos">0</p>
+                <p>pedidos realizados</p>
+            </div>
+            <div class="card-dashboard">
+                <h2><i class="fa-solid fa-clock"></i> Pendientes</h2>
+                <p class="numero" id="total-pendientes">0</p>
+                <p>pedidos por confirmar</p>
+            </div>
+            <div class="card-dashboard">
+                <h2><i class="fa-solid fa-sack-dollar"></i> Ventas</h2>
+                <p class="numero" id="total-ventas">$0</p>
+                <p>sin contar pedidos cancelados</p>
+            </div>
+        </div>
+
+        <section class="zona-peligro">
+            <h3>Restablecer datos de ejemplo</h3>
+            <p>Los datos se guardan en este navegador. Este botón borra todo lo creado y vuelve a cargar los productos iniciales.</p>
+            <button class="btn-eliminar" id="btn-restablecer">Restablecer datos</button>
+        </section>
+    </main>
+</div>
+
+    <script src="../assets/js/db.js"></script>
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>
